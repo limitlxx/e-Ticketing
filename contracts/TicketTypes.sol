@@ -17,15 +17,17 @@ enum Types {
 
   struct CreateEvent {
     string name;
+    uint256 eventId;
     string description;
     Types eventType;
-    string date;
+    uint256 date;
     string venue;
     string imageUrl;
   }
 
   struct RegisterEvent {
     string name;
+    uint256 eventId;
     string email;
     RegisterType eventTypes;
     string imageUrl;
