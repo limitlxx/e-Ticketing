@@ -45,4 +45,6 @@ export default function CreateEvent() {
       console.error('Error creating event:', error);
       alert('Error creating event. Please try again.');
     }
-  };
+  }
+
+}
