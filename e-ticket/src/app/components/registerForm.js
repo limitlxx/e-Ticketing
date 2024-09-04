@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function RegisterForm() {
     return(
         <div className="min-w-[30rem] w-[50%] mx-auto lg:ml-36 my-3 py-3">
@@ -12,7 +14,9 @@ export default function RegisterForm() {
                     placeholder="Enter your full name"
                     />
                 </fieldset>
-                <button className="bg-[#6d28d9] hover:bg-violet-500 text-white w-[70%] py-3 text-sm rounded-full mx-auto md:ml-2 mt-8 mb-16 block">Get Ticket</button>
+                <Link href="/details/register/ticket">
+                  <button className="bg-[#6d28d9] hover:bg-violet-500 text-white w-[70%] py-3 text-sm rounded-full mx-auto md:ml-2 mt-8 mb-16 block">Get Ticket</button>               
+                </Link>
                 
             </form>
         </div>
