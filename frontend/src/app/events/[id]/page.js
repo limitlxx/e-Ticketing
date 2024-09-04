@@ -1,8 +1,8 @@
 "use client"
 import { useState } from 'react';
 import { useContract, useSigner } from 'wagmi';
-import { uploadToIPFS } from '../../utils/ipfs';
-import { contractAddress, contractABI } from '../../utils/contracts';
+import { uploadToIPFS } from '../../../utils/ipfs';
+import { contractAddress, contractABI } from '../../../utils/contracts';
 
 export default function CreateEvent() {
   const [formData, setFormData] = useState({
