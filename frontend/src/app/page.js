@@ -1,21 +1,64 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+"use client";
+
+import { useAccount, useReadContract } from "wagmi";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { useEffect } from "react";
+import { abi } from "../../utils/abi";
+
 import NavBar from "./components/navbar";
 import LandingPage from "./components/landingpage";
 import EventCard from "./components/eventCard";
-import DetailPage from "./components/detailpage";
-
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState(null);
+  const [error, setError] = useState(null); // Set to false initially, so the drawer is closed by default
+  const { isConnecting } = useAccount();
+  const router = useRouter();
+
+  const { data: contractData, isError } = useReadContract({
+    address: "0xfde7e2D4a943da48416e2D2607e3396f405E25D7",
+    abi,
+    functionName: "getAllEvent",
+  });
+
+  useEffect(() => {
+    if (contractData) {
+      setData(contractData);
+      setLoading(false);
+    }
+
+    if (isError) {
+      setError("Error occurred while fetching data");
+      setLoading(false);
+    }
+  }, [contractData, isError]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  console.log(data);
+
   return (
     <div>
       <NavBar />
       <LandingPage />
-      <EventCard />
-      <DetailPage />
+
+      <h1 className="text-3xl font-bold mb-4">Upcoming Events</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {data.map((event) => (
+          <EventCard key={event.id} event={event} />
+        ))}
+      </div>
     </div>
   );
 }
-
 
 // import { useQuery } from '@apollo/client';
 // import { gql } from '@apollo/client';
