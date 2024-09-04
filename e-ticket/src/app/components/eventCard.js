@@ -1,5 +1,11 @@
+"use client"
+
+import Link from "next/link"
+
 export default function EventCard() {
     return(
+        <Link href="/details">
+
         <div className="min-w-full m-10 mx-auto flex justify-center items-center ">
             <div className="max-w-md mx-auto my-8 bg-white rounded-xl shadow-custom-shadow overflow-hidden md:max-w-2xl">
                 <div class="md:flex">
@@ -25,5 +31,6 @@ export default function EventCard() {
                 </div>
             </div>
         </div>
+        </Link>
     )
 }
