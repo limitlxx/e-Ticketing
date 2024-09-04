@@ -47,5 +47,4 @@ export default function CreateEvent() {
       alert('Error creating event. Please try again.');
     }
   }
-
 }
