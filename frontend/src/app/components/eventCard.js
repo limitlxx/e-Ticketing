@@ -55,16 +55,16 @@ export default function EventCard(event) {
   return (
     <div className="container mx-auto px-4 py-8">
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
-      {events.map((event) => (
+      {products.map((event) => (
         <Link href={`/events/${event.id}`} key={event.id}>
           <div className="bg-white rounded-lg overflow-hidden shadow-md border cursor-pointer">
             <img src={event.ipfshash} alt={event.name} className="object-cover w-full h-64" />
             <div className="p-4">
-              <h2 className="font-semibold text-lg text-gray-800">{event.name}</h2>
+              <h2 className="font-semibold text-lg text-gray-800">{event.title}</h2>
               <p className="text-sm text-gray-500 mt-2">{event.description}</p>
               <div className="mt-4 flex justify-between items-center">
-                <p className="text-sm text-gray-500">{event.creator}</p>
-                <p className="text-lg font-medium text-gray-900">{event.ticketPriceUSD}</p>
+                <p className="text-sm text-gray-500">{event.colors}</p>
+                <p className="text-lg font-medium text-gray-900">{event.price}</p>
               </div>
             </div>
           </div>
