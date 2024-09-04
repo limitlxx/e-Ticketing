@@ -1,4 +1,4 @@
-// 0x29c1bA47C5C619223C0a0eACBECEe43ECeAd8e69
+// 0xfde7e2D4a943da48416e2D2607e3396f405E25D7
 export const abi = [
   {
     inputs: [
