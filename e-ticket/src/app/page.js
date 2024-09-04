@@ -1,17 +1,12 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import NavBar from "./components/navbar";
-import LandingPage from "./components/landingpage";
-import EventCard from "./components/eventCard";
-import DetailPage from "./components/detailpage";
-
+"use client"
+import React from "react";
+import Link from "next/link";
+import HomePage from "./pages/HomePage";
 
 export default function Home() {
   return (
     <div>
-      <NavBar />
-      <LandingPage />
-      <EventCard />
-      <DetailPage />
+      <HomePage />
     </div>
   );
 }
