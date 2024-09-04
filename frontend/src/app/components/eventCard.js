@@ -1,68 +1,78 @@
 import React from "react";
 import Link from "next/link";
-
-import { useAccount, useReadContract } from "wagmi";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { useState } from "react";
+
+
+const products = [
+  {
+    id: 1,
+    title: "Basic Tee 8-Pack",
+    description: "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+    colors: "8 colors",
+    price: "$256",
+    image: "/path-to-image.jpg", // Replace with the actual image path
+  },
+  {
+    id: 1,
+    title: "Basic Tee 8-Pack",
+    description: "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+    colors: "8 colors",
+    price: "$256",
+    image: "/path-to-image.jpg", // Replace with the actual image path
+  },
+  {
+    id: 1,
+    title: "Basic Tee 8-Pack",
+    description: "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+    colors: "8 colors",
+    price: "$256",
+    image: "/path-to-image.jpg", // Replace with the actual image path
+  },
+  {
+    id: 1,
+    title: "Basic Tee 8-Pack",
+    description: "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+    colors: "8 colors",
+    price: "$256",
+    image: "/path-to-image.jpg", // Replace with the actual image path
+  },
+  {
+    id: 1,
+    title: "Basic Tee 8-Pack",
+    description: "Get the full lineup of our Basic Tees. Have a fresh shirt all week, and an extra for laundry day.",
+    colors: "8 colors",
+    price: "$256",
+    image: "/path-to-image.jpg", // Replace with the actual image path
+  },
+  // Add more product objects
+];
+
+
 
 export default function EventCard(event) {
   const [open, setOpen] = useState(false); // Set to false initially, so the drawer is closed by default
-  // const { isConnecting } = useAccount();
-  const router = useRouter();
 
   return (
-    <Link href="/details">
-      <div className="min-w-full m-10 mx-auto flex justify-center items-center ">
-        <div className="max-w-md mx-auto my-8 bg-white rounded-xl shadow-custom-shadow overflow-hidden md:max-w-2xl">
-          <div class="md:flex">
-            <div className="md:shrink-0">
-              <img
-                className="h-48 w-full object-cover md:h-full md:w-[20rem]"
-                src="/Frame 13.svg"
-                alt="Event Omage"
-              />
-            </div>
-            <div className="py-4 px-8">
-              <div className="uppercase tracking-wide text-sm text-gray-500 font-semibold">
-                7th September 2024
-              </div>
-              <a
-                href="#"
-                class="block mt-1 text-xl leading-tight font-bold text-[#364F6B] hover:underline"
-              >
-                How Using VAs & AI Can Help You Boost Productivity And Close
-                More Deals
-              </a>
-              <div className="flex text-sm my-3 items-center justify-between ml-2 mr-9">
-                <p className="items-center flex text-[#765BFF] text-base font-semibold">
-                  <span>
-                    <img
-                      className="h-[15px] mx-1 text-lg"
-                      src="/placeholder.svg"
-                    />
-                  </span>
-                  Lagos, Nigeria
-                </p>
-                <p className="font-medium text-base text-[#364F6B]">10:00AM</p>
-              </div>
-              <div className="flex items-center gap-28 md:gap-10 mt-12">
-                <p className="flex items-center text-sm">
-                  <span className="mr-1">
-                    <img src="/Group.svg" />
-                  </span>{" "}
-                  10+ Users attending
-                </p>
-                <button className="bg-gradient-to-r from-slate-200 to-slate-400 from px-4 py-1 text-sm rounded-xl">
-                  Opened
-                </button>
+    <div className="container mx-auto px-4 py-8">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-center">
+      {events.map((event) => (
+        <Link href={`/events/${event.id}`} key={event.id}>
+          <div className="bg-white rounded-lg overflow-hidden shadow-md border cursor-pointer">
+            <img src={event.ipfshash} alt={event.name} className="object-cover w-full h-64" />
+            <div className="p-4">
+              <h2 className="font-semibold text-lg text-gray-800">{event.name}</h2>
+              <p className="text-sm text-gray-500 mt-2">{event.description}</p>
+              <div className="mt-4 flex justify-between items-center">
+                <p className="text-sm text-gray-500">{event.creator}</p>
+                <p className="text-lg font-medium text-gray-900">{event.ticketPriceUSD}</p>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </Link>
-  );
+        </Link>
+      ))}
+    </div>
+  </div>
+);
 }
 
 // import React from 'react';
