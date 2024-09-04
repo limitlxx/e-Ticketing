@@ -1,3 +1,4 @@
+
 export default function EventCard() {
     return(
         <div className="min-w-full m-10 mx-auto flex justify-center items-center ">
@@ -27,3 +28,22 @@ export default function EventCard() {
         </div>
     )
 }
+
+// import React from 'react';
+// import Link from 'next/link';
+
+// const EventCard = ({ event }) => {
+//   return (
+//     <div className="border p-4 rounded-lg shadow-md">
+//       <h2 className="text-xl font-bold">{event.name}</h2>
+//       <p>Category: {event.category}</p>
+//       <p>Price: {event.ticketPrice} ETH</p>
+//       <p>Available Tickets: {event.availableTickets}</p>
+//       <Link href={`/events/${event.id}`}>
+//         <a className="mt-2 inline-block bg-blue-500 text-white px-4 py-2 rounded">
+//           View Event
+//         </a>
+//       </Link>
+//     </div>
+//   );
+// };
