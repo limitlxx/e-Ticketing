@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 import { useContract, useSigner } from 'wagmi';
 import { uploadToIPFS } from '../../utils/ipfs';
