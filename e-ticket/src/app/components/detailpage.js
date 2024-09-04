@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function DetailPage() {
     return(
         <div>
@@ -36,7 +38,10 @@ export default function DetailPage() {
                     <p className="flex items-center text-sm mb-8 font-medium text-gray-900">
                         <span className="text-lg mr-1"><img  src="/Group.svg" /></span> 10+ Users attending
                     </p>
+                    <Link href="/details/register">
+
                     <button className="bg-[#6d28d9] hover:bg-violet-500 text-white px-32 py-3 text-sm rounded-full">Get Ticket</button>
+                    </Link>
                 </div>
             </div>
         </div>
