@@ -23,18 +23,26 @@ export default function EventCard() {
                   7th September 2024
                 </div>
                 <h2 className="block mt-1 text-xl leading-tight font-bold text-[#364F6B]">
-                  How Using VAs & AI Can Help You Boost Productivity And Close More Deals
+                  How Using VAs & AI Can Help You Boost Productivity And Close
+                  More Deals
                 </h2>
                 <div className="flex text-sm my-3 items-center justify-between">
                   <p className="flex items-center text-[#765BFF] font-semibold">
-                    <img className="h-[15px] mx-1" src="/placeholder.svg" alt="Location" />
+                    <img
+                      className="h-[15px] mx-1"
+                      src="/placeholder.svg"
+                      alt="Location"
+                    />
                     Lagos, Nigeria
                   </p>
-                  <p className="font-medium text-base text-[#364F6B]">10:00AM</p>
+                  <p className="font-medium text-base text-[#364F6B]">
+                    10:00AM
+                  </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
                   <p className="flex items-center text-sm">
-                    <img src="/Group.svg" alt="Attendees" className="mr-2" /> 10+ Users attending
+                    <img src="/Group.svg" alt="Attendees" className="mr-2" />{" "}
+                    10+ Users attending
                   </p>
                   <button className="bg-gradient-to-r from-slate-200 to-slate-400 px-4 py-1 text-sm rounded-xl">
                     Opened
@@ -59,18 +67,26 @@ export default function EventCard() {
                   7th September 2024
                 </div>
                 <h2 className="block mt-1 text-xl leading-tight font-bold text-[#364F6B]">
-                  How Using VAs & AI Can Help You Boost Productivity And Close More Deals
+                  How Using VAs & AI Can Help You Boost Productivity And Close
+                  More Deals
                 </h2>
                 <div className="flex text-sm my-3 items-center justify-between">
                   <p className="flex items-center text-[#765BFF] font-semibold">
-                    <img className="h-[15px] mx-1" src="/placeholder.svg" alt="Location" />
+                    <img
+                      className="h-[15px] mx-1"
+                      src="/placeholder.svg"
+                      alt="Location"
+                    />
                     Lagos, Nigeria
                   </p>
-                  <p className="font-medium text-base text-[#364F6B]">10:00AM</p>
+                  <p className="font-medium text-base text-[#364F6B]">
+                    10:00AM
+                  </p>
                 </div>
                 <div className="flex items-center justify-between mt-4">
                   <p className="flex items-center text-sm">
-                    <img src="/Group.svg" alt="Attendees" className="mr-2" /> 10+ Users attending
+                    <img src="/Group.svg" alt="Attendees" className="mr-2" />{" "}
+                    10+ Users attending
                   </p>
                   <button className="bg-gradient-to-r from-slate-200 to-slate-400 px-4 py-1 text-sm rounded-xl">
                     Opened

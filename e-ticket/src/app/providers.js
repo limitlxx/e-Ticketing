@@ -13,10 +13,14 @@ export function Providers({ children }) {
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider theme={lightTheme({
-          accentColor: '#6d28d9',
-          borderRadius: 'large',
-        })}>{children}</RainbowKitProvider>
+        <RainbowKitProvider
+          theme={lightTheme({
+            accentColor: "#6d28d9",
+            borderRadius: "large",
+          })}
+        >
+          {children}
+        </RainbowKitProvider>
       </QueryClientProvider>
     </WagmiProvider>
   );
