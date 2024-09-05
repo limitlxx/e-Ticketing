@@ -5,7 +5,8 @@ import { abi } from "../../../utils/abi";
 
 import { useAccount, useReadContract } from "wagmi";
 import { useRouter } from "next/navigation"; 
-import { useEffect } from "react";
+import { useEffect } from "react"; 
+
 
 
 import Notification from "./notification";
@@ -16,12 +17,13 @@ export default function EventCard(events) {
   const [error, setError] = useState(null); // Set to false initially, so the drawer is closed by default
    
 
+  console.log(process.env.CONTRACT_ADDRESS);
+  
   const { data: contractData, isError } = useReadContract({
     address: process.env.CONTRACT_ADDRESS,
     abi,
     functionName: "getAllEvent",
   });
-
   useEffect(() => {
     if (contractData) {
       setData(contractData);
@@ -35,15 +37,15 @@ export default function EventCard(events) {
   }, [contractData, isError]);
 
   if (loading) {
-    // return <Notification/>;
-    return "Loading"
+    return <Notification/>;
+    // return "Loading"
   }
 
   if (error) {
     return <div>{error}</div>;
   }
 
-  console.log(data);
+ 
   
 
   return (

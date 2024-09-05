@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useContract, useSigner } from 'wagmi';
-import { uploadToIPFS } from '../../../../utils/ipfs';
+// import { uploadToIPFS } from '../../../../utils/ipfs';
 // import { contractAddress, contractABI } from '../../utils/contracts';
 
 export default function CreateEvent() {
