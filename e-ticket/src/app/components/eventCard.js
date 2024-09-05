@@ -14,7 +14,6 @@ export default function EventCard() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null); // Set to false initially, so the drawer is closed by default
    
-  console.log(contractAddress);
   const { data: contractData, isError } = useReadContract({
     address: contractAddress,
     abi,
@@ -34,17 +33,18 @@ export default function EventCard() {
   }, [contractData, isError]);
 
   if (loading) {
-    <Notifications/>;
+    <Notifications />
   }
 
   if (error) {
     return <div>{error}</div>;
   }
 
-
+  console.log(contractAddress);
   
 
   return (
+    
     <div className="container mx-auto p-4">
       <h1 className=" ml-10 text-2xl font-semibold">Events</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 my-8 sm:mx-10 gap-6">
@@ -96,6 +96,7 @@ export default function EventCard() {
       ))}
     </div>
   </div>
+     
 );
 }
 
