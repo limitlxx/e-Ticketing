@@ -27,8 +27,8 @@ function uniqueTicket() {
                 </div>  
             </div>
             <div className=" flex justify-between items-center mt-10">
-                <button className=" rounded-3xl text-white bg-[#765BFF] hover:border-2 hover:bg-white hover:text-black px-[6.33rem] py-4">Download Ticket</button>
-                <button className=" rounded-3xl text-black border-2 px-[6.33rem] hover:bg-[#765BFF] hover:text-white py-4">Add to Calender</button>
+                <button className=" transition duration-300 rounded-3xl text-white bg-[#765BFF] hover:border-2 hover:bg-white hover:text-black px-[6.33rem] py-4">Download Ticket</button>
+                <button className=" transition duration-300 rounded-3xl text-black border-2 px-[6.33rem] hover:bg-[#765BFF] hover:text-white py-4">Add to Calender</button>
             </div>
         </div>
     </div>
