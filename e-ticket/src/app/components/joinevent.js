@@ -74,27 +74,15 @@ export default function JoinEvent() {
 
                                         <div className="mt-10 mb-7 mx-2 pr-2">
                                             <h1 className="my-5 text-xl text-[#364F6B] font-bold">Description</h1>
-                                            <p className="text-[#364F6B] font-normal text-base">
-                                                Unlock the potential of virtual assistants (VAs) and artificial
-                                                intelligence (AI) to supercharge your productivity and close more
-                                                deals! Join industry experts as they dive into strategies for
-                                                leveraging VAs and AI tools to streamline your workflow, manage
-                                                tasks more efficiently, and enhance customer engagement. Discover
-                                                how to automate repetitive tasks, optimize your time, and focus on
-                                                what truly matters—growing your business. Whether you're a
-                                                solopreneur, a small business owner, or part of a large sales team,
-                                                this event will provide actionable insights and practical tips to
-                                                help you maximize your results
-                                            </p>
+                                            <img
+                                                className="h-48 w-full object-cover md:h-full xl:w-[20rem]"
+                                                src="/Frame 13.svg"
+                                                alt="Event Image"
+                                            />
                                         </div>
 
                                         <div className="ml-2">
-                                            <p className="flex items-center text-sm mb-8 font-medium text-gray-900">
-                                                <span className="text-lg mr-1">
-                                                    <img src="/Group.svg" />
-                                                </span>{" "}
-                                                10+ Users attending
-                                            </p>
+
                                             {/* <Link href="/details/register"> */}
                                             <JoinEvent />
                                         </div>
