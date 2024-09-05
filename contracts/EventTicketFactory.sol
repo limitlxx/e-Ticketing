@@ -17,6 +17,9 @@ contract EventTicketFactory is Ownable {
         uint256 id;
         address creator;
         string name;
+        uint date;
+        string location;
+        string time;
         string category;
         uint256 ticketPriceUSD; // Price in USD cents
         uint256 totalTickets;
