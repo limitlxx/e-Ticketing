@@ -37,7 +37,7 @@ This project is a decentralized ticketing system built on the Ethereum blockchai
 
    ```bash
    git clone https://github.com/limitlxx/e-Ticketing
-   cd nft-ticketing-system
+   cd e-Ticketing
    ```
 
 2. **Install Dependencies**
@@ -52,13 +52,10 @@ This project is a decentralized ticketing system built on the Ethereum blockchai
 
 3. **Configure Environment Variables**
 
-   Create a `.env.local` file in the root directory and add the following variables:
+   Create a `.env` file in the root directory and add the following variables:
 
    ```bash
-   NEXT_PUBLIC_ALCHEMY_API_KEY=<Your Alchemy API Key>
-   NEXT_PUBLIC_CONTRACT_ADDRESS=<Deployed Contract Address>
-   NEXT_PUBLIC_IPFS_GATEWAY=<IPFS Gateway URL>
-   ```
+   CONTRACT_ADDRESS=<Depolyment contract> 
 
 4. **Compile and Deploy Smart Contracts**
 
@@ -69,7 +66,7 @@ This project is a decentralized ticketing system built on the Ethereum blockchai
    npx hardhat run scripts/deploy.js --network <network-name>
    ```
 
-   Make sure to update the deployed contract address in your `.env.local` file.
+   Make sure to update the deployed contract address in your `.env` file.
 
 5. **Run the Frontend**
 
