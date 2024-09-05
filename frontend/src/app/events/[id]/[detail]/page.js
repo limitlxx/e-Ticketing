@@ -4,7 +4,7 @@ import { useContract, useSigner } from 'wagmi';
 // import { uploadToIPFS } from '../../../../utils/ipfs';
 // import { abi } from '../../../../utils/abi';
 // import { contractAddress } from '../../../../utils/services';
-import DetailPage from "../../components/detailpage";
+import DetailPage from "../../../components/detailpage";
 
 export default function JoinEvent() {
   const [formData, setFormData] = useState({

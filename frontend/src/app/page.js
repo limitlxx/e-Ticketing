@@ -1,8 +1,5 @@
 "use client";
 
- 
-
-
 import EventCard from "./components/eventCard";
 
 export default function Home() {
@@ -10,8 +7,7 @@ export default function Home() {
 
   return (
     <div>
-      <EventCard />
-     
+      <EventCard />     
     </div>
   );
 }

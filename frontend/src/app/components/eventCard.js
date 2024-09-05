@@ -35,7 +35,8 @@ export default function EventCard(events) {
   }, [contractData, isError]);
 
   if (loading) {
-    return <Notification/>;
+    // return <Notification/>;
+    return "Loading"
   }
 
   if (error) {
