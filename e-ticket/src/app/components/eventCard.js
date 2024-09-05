@@ -57,15 +57,15 @@ export default function EventCard() {
     </Link>
 =======
     <div className="container mx-auto p-4">
-      <h1 className=" ml-20 text-2xl font-semibold">Events</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 my-8 sm:mx-20 gap-6">
+      <h1 className=" ml-10 text-2xl font-semibold">Events</h1>
+      <div className="grid grid-cols-1 lg:grid-cols-2 my-8 sm:mx-10 gap-6">
         {/* Repeat this block for additional event cards */}
         <Link href="/details">
-          <div className="bg-white rounded-xl shadow-custom-shadow overflow-hidden hover:shadow-lg transition-shadow duration-300">
+          <div className="bg-white rounded-xl shadow-custom-shadow hover:shadow-lg transition-shadow duration-300">
             <div className="md:flex">
               <div className="md:shrink-0">
                 <img
-                  className="h-48 w-full object-cover md:h-full md:w-[20rem]"
+                  className="h-48 w-full object-cover md:h-full xl:w-[20rem]"
                   src="/Frame 13.svg"
                   alt="Event Image"
                 />
@@ -101,7 +101,7 @@ export default function EventCard() {
             <div className="md:flex">
               <div className="md:shrink-0">
                 <img
-                  className="h-48 w-full object-cover md:h-full md:w-[20rem]"
+                  className="h-48 w-full object-cover md:h-full xl:w-[20rem]"
                   src="/Frame 13.svg"
                   alt="Event Image"
                 />
