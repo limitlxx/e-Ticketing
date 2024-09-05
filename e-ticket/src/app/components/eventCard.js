@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { abi } from "../../../utils/abi";
 import { contractAddress } from "../../../utils/services";
-import { Notifications } from "./notification";
+// import { Notifications } from "./notification";
 
 import { useAccount, useReadContract } from "wagmi";
 import { useRouter } from "next/navigation"; 
@@ -33,7 +33,7 @@ export default function EventCard() {
   }, [contractData, isError]);
 
   if (loading) {
-     <Notifications />;
+     return "laoding";
   }
 
   if (error) {
@@ -49,7 +49,7 @@ export default function EventCard() {
       <h1 className=" ml-10 text-2xl font-semibold">Events</h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 my-8 sm:mx-10 gap-6">
         {data.map((event) => (
-          <Link href={`/event/${event.id}`} key={event.id}>
+          <Link href={`/events/${event.id}`} key={event.id}>
             <div className="bg-white rounded-xl shadow-custom-shadow hover:shadow-lg transition-shadow duration-300">
               <div className="md:flex">
                 <div className="md:shrink-0">
