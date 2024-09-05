@@ -12,3 +12,5 @@ export const convertBigIntToString = (obj) => {
   }
   return obj;
 };
+
+export const contractAddress = "0xfde7e2D4a943da48416e2D2607e3396f405E25D7"
