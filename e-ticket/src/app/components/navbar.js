@@ -20,14 +20,16 @@ export default function NavBar() {
             className="ml-1 w-3.5 translate-y-[0.10rem]"
           />
         </div>
-        <div className="text-xs cursor-pointer  flex items-center justify-center">
-          <h1 className="text-[0.9rem] font-medium ">CREATE EVENT</h1>
-          <img
-            src="/downArrow.svg"
-            alt="down arrow"
-            className="ml-1 w-3.5 translate-y-[0.10rem]"
-          />
-        </div>
+        <Link href="/create-event">
+          <div className="text-xs cursor-pointer  flex items-center justify-center">
+            <h1 className="text-[0.9rem] font-medium ">CREATE EVENT</h1>
+            <img
+              src="/downArrow.svg"
+              alt="down arrow"
+              className="ml-1 w-3.5 translate-y-[0.10rem]"
+            />
+          </div>
+        </Link>
         <div className="text-xs cursor-pointer flex items-center justify-center">
           <h1 className="text-[0.9rem] font-medium ">EXPLORE</h1>
           <img
